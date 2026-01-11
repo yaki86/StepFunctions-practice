@@ -1,4 +1,4 @@
 - CodePipeline
-- CodeCommit
 - StepFunctions
 - CodeBuild
+- lambda

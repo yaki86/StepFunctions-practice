@@ -11,3 +11,9 @@ module "stepfunctions" {
   codebuild_project_name = module.codebuild.codebuild_project_name
   codebuild_project_arn  = module.codebuild.codebuild_project_arn
 }
+
+module "lambda" {
+  source = "../../modules/lambda"
+  env    = local.env
+  prj    = local.prj
+}

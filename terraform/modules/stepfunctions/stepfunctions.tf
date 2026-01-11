@@ -12,11 +12,6 @@ resource "aws_sfn_state_machine" "sfn" {
     codebuild_project_name = var.codebuild_project_name
   })
 
-  depends_on = [
-    aws_iam_role.stepfunctions,
-    aws_sfn_state_machine.sfn
-  ]
-
 }
 
 resource "aws_cloudwatch_log_group" "stepfunctions" {
