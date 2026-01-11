@@ -1,0 +1,26 @@
+{
+  "version": "0.2",
+  "phases": {
+    "install": {
+      "commands": [
+        "pip3 install --no-cache-dir pytest pytest-html pytest-metadata pytest-playwright playwright",
+        "playwright install --with-deps chromium"
+      ]
+    },
+    "build": {
+      "commands": [
+        "pytest tests/test_pw.py -s",
+        "pytest tests/test_pw.py -v",
+        "pytest tests/test_pw.py -s -v"
+      ]
+    }
+  },
+  "reports": {
+    "sfn-reports": {
+      "files": [
+        "test-results/junit.xml"
+      ],
+      "file-format": "JUNITXML"
+    }
+  }
+}

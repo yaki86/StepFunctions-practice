@@ -5,6 +5,6 @@ dev-plan:
 	cd terraform/envs/dev && terraform init \
 	&& terraform plan --parallelism=30
 
-dev-plan:
+dev-apply:
 	cd terraform/envs/dev && terraform init \
 	&& terraform apply --parallelism=30
