@@ -1,0 +1,10 @@
+{
+  "Comment": "A description of my state machine",
+  "StartAt": "成功",
+  "States": {
+    "成功": {
+      "Type": "Succeed"
+    }
+  },
+  "QueryLanguage": "JSONata"
+}

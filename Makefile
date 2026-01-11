@@ -8,3 +8,7 @@ dev-plan:
 dev-apply:
 	cd terraform/envs/dev && terraform init \
 	&& terraform apply --parallelism=30
+
+dev-apply-y:
+	cd terraform/envs/dev && terraform init \
+	&& terraform apply --auto-approve --parallelism=30

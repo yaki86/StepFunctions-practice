@@ -9,9 +9,9 @@
     },
     "build": {
       "commands": [
-        "pytest tests/test_pw.py -s",
-        "pytest tests/test_pw.py -v",
-        "pytest tests/test_pw.py -s -v"
+        "pytest tests/test_pw.py -s --junitxml=test-results/junit.xml",
+        "pytest tests/test_pw.py -v --junitxml=test-results/junit.xml",
+        "pytest tests/test_pw.py -s -v --junitxml=test-results/junit.xml"
       ]
     }
   },
