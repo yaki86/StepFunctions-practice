@@ -1,7 +1,44 @@
 {
-  "test-input": [
+  "testCase": [
     {
-      "name": "test"
+      "name": "test1",
+      "pytestMarker": "test1",
+      "domains": [
+        {
+          "name": "domain1",
+          "setup": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success",
+          "end": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success"
+        }
+      ]
+    },
+    {
+      "name": "test2",
+      "pytestMarker": "test2",
+      "domains": [
+        {
+          "name": "domain1",
+          "setup": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success",
+          "end": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success"
+        },
+        {
+          "name": "domain2",
+          "setup": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success",
+          "end": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success"
+        }
+      ]
+    }
+  ],
+  "backup-lambda": [
+    {
+      "name": "domain1",
+      "backup": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success",
+      "restore": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success"
+    }
+  ],
+  "lambda-arn": [
+    {
+      "ok": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-success",
+      "fail": "arn:aws:lambda:ap-northeast-1:534735586567:function:dev-sfn-fail"
     }
   ]
 }
