@@ -20,10 +20,24 @@ data "aws_iam_policy_document" "codepipeline_iam_policy" {
     actions = [
       "states:DescribeStateMachine",
       "states:StartExecution",
-      "states:DescribeExecution"
+      "states:DescribeExecution",
+      "states:GetExecutionHistory",
+      "states:StopExecution"
     ]
     resources = [
       var.stepfunctions_state_machine_arn
+    ]
+  }
+
+  # Step Functions 実行結果の取得
+  statement {
+    effect = "Allow"
+    actions = [
+      "states:DescribeExecution",
+      "states:GetExecutionHistory"
+    ]
+    resources = [
+      "arn:aws:states:*:*:execution:*:*"
     ]
   }
 

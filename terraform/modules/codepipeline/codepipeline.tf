@@ -38,7 +38,7 @@ resource "aws_codepipeline" "codepipeline" {
       configuration = {
         StateMachineArn = var.stepfunctions_state_machine_arn
         InputType       = "FilePath"
-        Input           = "stepfunctions-input.json"
+        Input           = "terraform/modules/codepipeline/stepfunctions-input.json"
       }
     }
   }
