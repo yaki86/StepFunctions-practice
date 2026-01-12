@@ -29,15 +29,16 @@ resource "aws_codepipeline" "codepipeline" {
   stage {
     name = "Build"
     action {
-      category = "Invoke"
-      name     = "invoke-stepfunctions"
-      owner    = "AWS"
-      provider = "StepFunctions"
-      version  = "1"
+      category        = "Invoke"
+      name            = "invoke-stepfunctions"
+      owner           = "AWS"
+      provider        = "StepFunctions"
+      version         = "1"
+      input_artifacts = ["source_output"]
       configuration = {
-        "StateMachineArn" = var.stepfunctions_state_machine_arn
-        "InputType"       = "FilePath"
-        "Input"           = "${path.module}/stepfunctions-input.json"
+        StateMachineArn = var.stepfunctions_state_machine_arn
+        InputType       = "FilePath"
+        Input           = "stepfunctions-input.json"
       }
     }
   }
