@@ -53,4 +53,12 @@ data "aws_iam_policy_document" "stepfunctions_iam_policy" {
       "codebuild:BatchGetBuilds"
     ]
   }
+
+  statement {
+    effect    = "Allow"
+    resources = var.lambda_arns
+    actions = [
+      "lambda:invoke"
+    ]
+  }
 }

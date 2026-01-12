@@ -13,3 +13,7 @@ variable "codebuild_project_name" {
 variable "codebuild_project_arn" {
   type = string
 }
+
+variable "lambda_arns" {
+  type = list(string)
+}

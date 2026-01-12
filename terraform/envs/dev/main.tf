@@ -19,6 +19,7 @@ module "stepfunctions" {
   prj                    = local.prj
   codebuild_project_name = module.codebuild.codebuild_project_name
   codebuild_project_arn  = module.codebuild.codebuild_project_arn
+  lambda_arns            = module.lambda.lambda_arns
 }
 
 module "lambda" {
