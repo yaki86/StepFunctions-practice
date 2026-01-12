@@ -12,3 +12,6 @@ dev-apply:
 dev-apply-y:
 	cd terraform/envs/dev && terraform init \
 	&& terraform apply --auto-approve --parallelism=30
+
+gic:
+	scripts/get-caller-identity.sh

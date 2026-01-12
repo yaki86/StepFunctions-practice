@@ -7,3 +7,9 @@
 
 # lambda zip files
 **/*_lambda.zip
+
+# GitHub copilot setting
+**/.github
+
+# CODEX setting
+**/AGENTS.md
